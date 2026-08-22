@@ -1,0 +1,52 @@
+name: Deploy Labs to monsun.io/labs
+
+on:
+  repository_dispatch:
+    types: [labs-updated]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout monsun.io site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Checkout Monsun Labs source
+        uses: actions/checkout@v4
+        with:
+          repository: monsun-labs/monsun-labs.github.io
+          path: monsun-labs
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build Labs documentation
+        run: |
+          pip install zensical
+          cd monsun-labs
+          zensical build --clean
+
+      - name: Publish to labs/ on main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -rf labs
+          mkdir -p labs
+          cp -r monsun-labs/site/* labs/
+          touch labs/.nojekyll
+          git add labs
+          if git diff --staged --quiet; then
+            echo "No labs changes to deploy"
+            exit 0
+          fi
+          git commit -m "Deploy labs docs to monsun.io/labs [skip ci]"
+          git push origin HEAD:main

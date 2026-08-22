@@ -192,7 +192,7 @@ This report documents the SEO optimization work completed for *Monsun* on #link(
 - Supporting copy names Monsun + metocean consultancy
 - Services / About rewritten around metocean consultancy & intelligence
 - Footer email aligned to `contact@monsun.io`
-- Labs / Forecast links updated to `https://labs.monsun.io` and `https://forecast.monsun.io`
+- Labs / Forecast links updated to `https://monsun.io/labs/` and `https://monsun.io/forecast/`
 - Internal links: sitemap → `/sitemap.xml`, services CTAs → contact
 
 == Content depth
@@ -349,7 +349,7 @@ Prioritized next steps beyond the current foundation:
 
 - Share pillar posts via LinkedIn (`monsunic`), partner pages, and Monsun Labs / Forecast with contextual links back to `monsun.io`
 - Pursue industry citations (guest notes, conference pages, open-data acknowledgements) rather than generic directory spam
-- Keep Labs (`labs.monsun.io`) and Forecast (`forecast.monsun.io`) interlinked with clear brand + keyword anchors
+- Keep Labs (`monsun.io/labs/`) and Forecast (`monsun.io/forecast/`) interlinked with clear brand + keyword anchors
 
 = Conclusion
 

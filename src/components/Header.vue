@@ -189,8 +189,8 @@ const navLinks = ref([
     label: 'Outreach',
     type: 'anchor',
     children: [
-      { href: 'https://labs.monsun.io', label: 'Monsun Labs', external: true },
-      { href: 'https://forecast.monsun.io', label: 'Monsun Forecast', external: true },
+      { href: 'https://monsun.io/labs/', label: 'Monsun Labs', external: true },
+      { href: 'https://monsun.io/forecast/', label: 'Monsun Forecast', external: true },
     ],
   },
   { href: '/blog', label: 'Blog', type: 'route' },
