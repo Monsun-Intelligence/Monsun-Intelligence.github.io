@@ -19,6 +19,15 @@
                 class="bg-blue-900 text-white px-8 py-3 rounded-full tansition shadow-lg">
                 Consult with Us
             </a>
+            <a
+                href="https://app.monsun.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-blue-800 text-blue-900 hover:bg-blue-50
+                text-center px-8 py-3 rounded-full transition"
+                aria-label="Open Monsun Intelligence app">
+                Open App
+            </a>
             <a href="#services"
                 class="border border-blue-800 text-blue-900 hover:bg-blue-50
                 text-center px-8 py-3 rounded-full transition" aria-label="Explore our services">

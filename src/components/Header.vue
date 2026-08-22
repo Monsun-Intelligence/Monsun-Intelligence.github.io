@@ -32,6 +32,8 @@
           <a
             v-else
             :href="link.href"
+            :target="link.type === 'external' ? '_blank' : undefined"
+            :rel="link.type === 'external' ? 'noopener noreferrer' : undefined"
             class="text-gray-900 font-bold hover:text-blue-900 transition-colors duration-200 
                    focus:outline-none focus:ring-2 focus:ring-blue-600 rounded cursor-pointer select-none"
           >
@@ -117,6 +119,8 @@
               <a
                 v-else
                 :href="link.href"
+                :target="link.type === 'external' ? '_blank' : undefined"
+                :rel="link.type === 'external' ? 'noopener noreferrer' : undefined"
                 class="block text-gray-800 hover:text-blue-900 transition-colors duration-200 cursor-pointer"
                 @click="isMenuOpen = false"
               >
@@ -191,8 +195,10 @@ const navLinks = ref([
     children: [
       { href: 'https://monsun.io/labs/', label: 'Monsun Labs', external: true },
       { href: 'https://monsun.io/forecast/', label: 'Monsun Forecast', external: true },
+      { href: 'https://app.monsun.io', label: 'Monsun App', external: true },
     ],
   },
+  { href: 'https://app.monsun.io', label: 'App', type: 'external' },
   { href: '/blog', label: 'Blog', type: 'route' },
   { href: '/#about', label: 'About Us', type: 'anchor' },
   { href: '/#contact', label: 'Contact', type: 'anchor' },
