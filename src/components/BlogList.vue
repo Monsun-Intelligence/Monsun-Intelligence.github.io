@@ -1,36 +1,45 @@
 <template>
-  <section class="py-20 bg-gradient-to-b from-transparent via-blue-50/60 to-white pt-40">
-    <div class="max-w-6xl mx-auto px-6 sm:px-8">
-      <h1 class="text-3xl sm:text-5xl font-bold text-blue-900 text-center mb-4">
-        Monsun Blog
-      </h1>
-      <p class="text-center text-gray-700 text-lg mb-10 max-w-2xl mx-auto">
-        Metocean insights, marine forecasting, and ocean data intelligence from the Monsun consultancy team.
-      </p>
+  <section class="bg-gradient-to-b from-blue-50/80 via-white to-white py-20 pt-28 sm:pt-32 sm:py-28">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <div class="mx-auto mb-12 max-w-2xl text-center sm:mb-14">
+        <h1 class="text-3xl font-bold tracking-tight text-blue-950 sm:text-5xl">
+          Monsun Blog
+        </h1>
+        <p class="mt-4 text-lg leading-relaxed text-slate-600">
+          Metocean insights, marine forecasting, and ocean data intelligence from the Monsun consultancy team.
+        </p>
+      </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
         <RouterLink
           v-for="post in sortedPosts"
           :key="post.slug"
           :to="`/blog/${post.slug}`"
-          class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+          class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
         >
-          <div>
+          <div
+            v-if="post.meta.image"
+            class="aspect-[16/10] overflow-hidden bg-slate-100"
+          >
             <img
-              v-if="post.meta.image"
               :src="post.meta.image"
               :alt="post.meta.title"
-              class="rounded-xl mb-6 object-cover w-full h-48"
+              class="h-full w-full object-cover object-top transition duration-300 group-hover:scale-[1.02]"
               loading="lazy"
               width="800"
-              height="450"
+              height="500"
             />
-            <h2 class="text-xl font-semibold text-blue-800 mb-3">
+          </div>
+          <div class="flex flex-1 flex-col p-5 sm:p-6">
+            <h2 class="text-lg font-semibold leading-snug text-blue-950 group-hover:text-blue-800">
               {{ post.meta.title }}
             </h2>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-600 sm:text-[0.95rem]">
               {{ post.meta.excerpt || post.meta.description }}
             </p>
+            <span class="mt-4 text-sm font-semibold text-blue-700">
+              Read more →
+            </span>
           </div>
         </RouterLink>
       </div>

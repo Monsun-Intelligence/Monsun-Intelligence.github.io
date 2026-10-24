@@ -9,6 +9,9 @@ export const DEFAULT_DESCRIPTION =
 
 /** Blog slugs discovered from src/blog — keep in sync when adding posts */
 export const BLOG_SLUGS = [
+  'from-ocean-conditions-to-operational-decisions',
+  'weather-forecasts-everywhere-but-can-they-help-you-decide',
+  'sea-conditions-km-putri-sakinah-accident',
   'what-is-metocean-consultancy',
   'metocean-intelligence-for-offshore-operations',
   'sea-state-monitoring-best-practices',

@@ -1,27 +1,56 @@
 <template>
-  <article class="max-w-4xl mx-auto py-16 px-6 prose prose-blue pt-40">
-    <h1 class="text-4xl font-bold text-blue-900 mb-6">{{ post.meta.title }}</h1>
-    <p class="text-gray-500 mb-4">{{ post.meta.date }}</p>
+  <section class="bg-gradient-to-b from-blue-50/80 via-white to-white pt-28 sm:pt-32 pb-20">
+    <article class="mx-auto max-w-3xl px-5 sm:px-8">
+      <nav class="mb-8 text-sm text-slate-500">
+        <RouterLink to="/blog" class="font-medium text-blue-700 hover:text-blue-900 hover:underline">
+          Blog
+        </RouterLink>
+        <span class="mx-2 text-slate-300">/</span>
+        <span class="text-slate-600">{{ post.meta.title }}</span>
+      </nav>
 
-    <img
-      v-if="post.meta.image"
-      :src="post.meta.image"
-      :alt="post.meta.title"
-      class="rounded-xl mb-6 w-full h-64 object-cover"
-      loading="eager"
-      width="800"
-      height="450"
-    />
+      <header class="mb-10">
+        <p v-if="formattedDate" class="mb-3 text-sm font-medium uppercase tracking-wider text-slate-500">
+          <time :datetime="post.meta.date">{{ formattedDate }}</time>
+        </p>
+        <h1 class="text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
+          {{ post.meta.title }}
+        </h1>
+        <p
+          v-if="post.meta.excerpt || post.meta.description"
+          class="mt-4 text-lg leading-relaxed text-slate-600"
+        >
+          {{ post.meta.excerpt || post.meta.description }}
+        </p>
+      </header>
 
-    <div v-html="post.html"></div>
+      <figure
+        v-if="post.meta.image"
+        class="mb-12 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm"
+      >
+        <img
+          :src="post.meta.image"
+          :alt="post.meta.title"
+          class="block h-auto w-full"
+          loading="eager"
+          width="1200"
+          height="800"
+        />
+      </figure>
 
-    <RouterLink
-      to="/blog"
-      class="inline-block mt-10 text-blue-700 font-semibold hover:underline"
-    >
-      ← Back to Blog
-    </RouterLink>
-  </article>
+      <div class="blog-prose" v-html="post.html"></div>
+
+      <div class="mt-14 border-t border-slate-200 pt-8">
+        <RouterLink
+          to="/blog"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-900"
+        >
+          <span aria-hidden="true">←</span>
+          Back to Blog
+        </RouterLink>
+      </div>
+    </article>
+  </section>
 </template>
 
 <script setup>
@@ -45,6 +74,18 @@ const post = computed(() => {
     meta: file.frontmatter || {},
     html: marked.parse(file.default || ''),
   }
+})
+
+const formattedDate = computed(() => {
+  const raw = post.value.meta?.date
+  if (!raw) return ''
+  const d = new Date(raw)
+  if (Number.isNaN(d.getTime())) return String(raw)
+  return d.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  })
 })
 
 useSeo(() => {

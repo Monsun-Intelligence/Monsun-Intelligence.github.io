@@ -24,54 +24,51 @@
       data-aos="fade-up"
       data-aos-delay="400"
     >
-      <div
+      <RouterLink
         v-for="(post, index) in latestPosts"
         :key="index"
-        class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+        :to="`/blog/${post.slug}`"
+        class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
       >
-        <div>
+        <div
+          v-if="post.meta.image"
+          class="aspect-[16/10] overflow-hidden bg-slate-100"
+        >
           <img
-            v-if="post.meta.image"
             :src="post.meta.image"
             :alt="post.meta.title"
-            class="rounded-xl mb-6 object-cover w-full h-48"
+            class="h-full w-full object-cover object-top transition duration-300 group-hover:scale-[1.02]"
             loading="lazy"
             width="800"
-            height="450"
+            height="500"
           />
-          <h3 class="text-xl font-semibold text-blue-800 mb-3">
-            <RouterLink
-              :to="`/blog/${post.slug}`"
-              class="hover:text-blue-900 transition-colors duration-200"
-            >
-              {{ post.meta.title }}
-            </RouterLink>
+        </div>
+        <div class="flex flex-1 flex-col p-6 sm:p-7">
+          <h3 class="text-xl font-semibold leading-snug text-blue-950 group-hover:text-blue-800">
+            {{ post.meta.title }}
           </h3>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <p class="mt-3 flex-1 leading-relaxed text-slate-600">
             {{ post.meta.excerpt }}
           </p>
+          <span class="mt-5 inline-flex items-center text-sm font-semibold text-blue-700">
+            Read More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </span>
         </div>
-        <RouterLink
-          :to="`/blog/${post.slug}`"
-          class="text-blue-700 font-medium inline-flex items-center group"
-        >
-          Read More
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </RouterLink>
-      </div>
+      </RouterLink>
     </div>
 
     <!-- See More Button -->
