@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://monsun.io/labs/</loc>
+      </url>
+      <url>
+        <loc>https://monsun.io/labs/LICENSE-CONTENT/</loc>
+      </url>
+      <url>
+        <loc>https://monsun.io/labs/community/</loc>
+      </url>
+      <url>
+        <loc>https://monsun.io/labs/open-data/</loc>
+      </url>
+      <url>
+        <loc>https://monsun.io/labs/tutorials/</loc>
+      </url>
+      <url>
+        <loc>https://monsun.io/labs/tutorials/extract-point/</loc>
+      </url>
+</urlset>
