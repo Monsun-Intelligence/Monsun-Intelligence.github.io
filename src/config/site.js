@@ -12,13 +12,6 @@ export const BLOG_SLUGS = [
   'from-ocean-conditions-to-operational-decisions',
   'weather-forecasts-everywhere-but-can-they-help-you-decide',
   'sea-conditions-km-putri-sakinah-accident',
-  'what-is-metocean-consultancy',
-  'metocean-intelligence-for-offshore-operations',
-  'sea-state-monitoring-best-practices',
-  'harnessing-ocean-data-with-ai',
-  'open-data-coastal-management',
-  'offshore-wind-forecasting',
-  'satellite-data-integration',
 ]
 
 export function absoluteUrl(path = '/') {
