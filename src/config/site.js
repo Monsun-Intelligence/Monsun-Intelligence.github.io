@@ -9,6 +9,7 @@ export const DEFAULT_DESCRIPTION =
 
 /** Blog slugs discovered from src/blog — keep in sync when adding posts */
 export const BLOG_SLUGS = [
+  'beyond-moderate-sea-what-the-metocean-data-shows-in-the-kmp-virgo-transport-8-capsizing'
   'from-ocean-conditions-to-operational-decisions',
   'weather-forecasts-everywhere-but-can-they-help-you-decide',
   'sea-conditions-km-putri-sakinah-accident',
