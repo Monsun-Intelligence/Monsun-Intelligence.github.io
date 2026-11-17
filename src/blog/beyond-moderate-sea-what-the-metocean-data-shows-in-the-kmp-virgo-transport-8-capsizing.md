@@ -1,14 +1,14 @@
 ---
 title: 'Beyond Moderate sea: What the Metocean Data Shows in the KMP Virgo Transport 8 Capsizing'
 date: 2026-11-17
-image: https://awsimages.detik.net.id/community/media/visual/2026/09/13/potret-udara-kapal-virgo-transport-8-yang-terbalik-usai-hilang-kontak-di-laut-jawa-dokbasarnas-1789305610316_169.jpeg
+image: https://awsimages.detik.net.id/community/media/visual/2026/09/13/potret-udara-kapal-virgo-transport-8-yang-terbalik-usai-hilang-kontak-di-laut-jawa-dokbasarnas-1789305610316_169.jpeg?w=700&q=90
 excerpt: An independent metocean analysis of Labuan Bajo around 26 December 2025 — wind, waves, and currents, and why a calm-looking sea can still be operationally complex.
 description: Monsun examines wind, waves, and ocean currents around Java Sea Masalembo during the KMP Virgo Transport 8 capsizing — an independent metocean assessment, not an accident investigation.
 ---
 
 **An Independent Metocean Analysis of Masalembo Waters and the Eastern Java Sea**
 
-![KM Virgo Transport 8 at sea](https://awsimages.detik.net.id/community/media/visual/2026/09/13/potret-udara-kapal-virgo-transport-8-yang-terbalik-usai-hilang-kontak-di-laut-jawa-dokbasarnas-1789305610316_169.jpeg?w=700&q=90)
+![KM Virgo Transport 8 at sea]
 *KMP Virgo Transport 8 (IMO 8625179) during capsizing at sea. Photo via Detik.com.*
 
 
