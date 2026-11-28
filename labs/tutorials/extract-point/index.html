@@ -1623,6 +1623,7 @@ Loading the entire cube to get that spike is the mistake most scripts make.</p>
 <p>The file is hosted on <a href="https://github.com/monsun-labs/extract-point/releases/tag/v0.1-data">GitHub Releases</a>
 and downloaded automatically by the Step 0 bootstrap cell.
 No Copernicus CDS account is needed to run the tutorial.</p>
+<p><img alt="ERA5 sample download domain around Natuna Sea" src="media/download_area.png" /></p>
 <hr />
 <h3 id="section-3-four-extraction-methods">Section 3 — Four extraction methods<a class="headerlink" href="#section-3-four-extraction-methods" title="Permanent link">&para;</a></h3>
 <p>All four methods extract the same point: <strong>4°N, 108°E</strong>.
@@ -1773,6 +1774,7 @@ upcoming tutorials on wave statistics and extreme value analysis.</p>
 <h4 id="quick-look-time-series-plot">Quick-look time series plot<a class="headerlink" href="#quick-look-time-series-plot" title="Permanent link">&para;</a></h4>
 <p>The notebook produces a <strong>four-panel</strong> plot (Hs, Tp, swell Hs, wind speed / wave direction)
 for the first three months of 2024 as a visual sanity check.</p>
+<p><img alt="Quick-look time series from the committed notebook output" src="media/output_26_0.png" /></p>
 <hr />
 <h3 id="section-5-benchmark-speed-and-memory">Section 5 — Benchmark: speed and memory<a class="headerlink" href="#section-5-benchmark-speed-and-memory" title="Permanent link">&para;</a></h3>
 <p>The benchmark measures <strong>both time and peak RAM</strong> across all four methods — because
@@ -1780,6 +1782,7 @@ the whole point of lazy loading is saving memory, not just saving time.</p>
 <p><strong>5.1 — Quick live demo</strong> on the ~118 MB teaching file (differences are modest on this size).</p>
 <p><strong>5.2 — Pre-computed charts</strong> in <code>data/benchmark/</code> from maintainer runs on larger ERA5
 files — learners view PNG/CSV only, no multi-GB download.</p>
+<p><img alt="Pre-computed large-file benchmark chart" src="media/era5_large_benchmark.png" /></p>
 <p>Representative results on the teaching sample:</p>
 <table>
 <thead>

@@ -1,7 +1,11 @@
-body_sha256: 6af9bb522ef4747d1e82fb857506f9253cd3c7730544601bd53c162d07ff7918
+body_sha256: 38d675e6a096ae2314e045e2b65d44034b1fbf745c0f19a032d9de6e34063249
 executed: false
-git_sha: 86eb0adcabe2376f8cff4cf4d2055eb3b9a8ee87
+git_sha: 6588ee3125214a196f37418a220b1b2f7925ddf5
 media_files:
+- download_area.png
+- era5_large_benchmark.png
+- output_26_0.png
+media_referenced:
 - download_area.png
 - era5_large_benchmark.png
 - output_26_0.png
