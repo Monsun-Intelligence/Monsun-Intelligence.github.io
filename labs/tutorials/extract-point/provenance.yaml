@@ -1,0 +1,10 @@
+body_sha256: 6af9bb522ef4747d1e82fb857506f9253cd3c7730544601bd53c162d07ff7918
+executed: false
+git_sha: 86eb0adcabe2376f8cff4cf4d2055eb3b9a8ee87
+media_files:
+- download_area.png
+- era5_large_benchmark.png
+- output_26_0.png
+notebook: notebooks/extract_point.ipynb
+replace_index: false
+slug: extract-point
